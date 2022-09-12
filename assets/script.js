@@ -58,7 +58,7 @@ function startQuiz() {
   //  -- clear container
   document.getElementById("mainContainer").innerHTML = "";
 
-  var currentQuestion = questions.choices[quizIndex];
+  var currentQuestion = questions[(quizIndex, quizIndex)];
   console.log(currentQuestion);
   //  -- loop through array of questions / answers
   for (i = 0; i < questions.length; i++) {
