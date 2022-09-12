@@ -7,23 +7,27 @@ document.getElementById("start").onclick = startQuiz;
 // variable of seconds for timer
 var secondsLeft = 75;
 
+//  -- variable for quiz index
+var quizIndex = 0;
+
 // variable for score
 var score = 0;
 
 // array of questions and correct answers
 var questions = [
   {
-    title: "Commonly used data types DO NOT include:",
+    currentQuestion: "Commonly used data types DO NOT include:",
     choices: ["strings", "booleans", "alerts", "numbers"],
     answer: "alerts",
   },
   {
-    title: "The condition in an if / else statement is enclosed within ____.",
+    currentQuestion:
+      "The condition in an if / else statement is enclosed within ____.",
     choices: ["quotes", "curly brackets", "parentheses", "square brackets"],
     answer: "parentheses",
   },
   {
-    title: "Arrays in Javascript can be used to store ____.",
+    currentQuestion: "Arrays in Javascript can be used to store ____.",
     choices: [
       "numbers and strings",
       "other arrays",
@@ -33,13 +37,13 @@ var questions = [
     answer: "all of the above",
   },
   {
-    title:
+    currentQuestion:
       "A very useful tool for used during development and debugging for printing content to the debugger is:",
     choices: ["Javascript", "terminal / bash", "for loops", "console log"],
     answer: "console log",
   },
   {
-    title:
+    currentQuestion:
       "String values must be enclosed within ____ when being assigned to variables.",
     choices: ["commas", "curly brackets", "quotes", "parenthesis"],
     answer: "quotes",
@@ -52,26 +56,24 @@ function startQuiz() {
   setTime();
   console.log("start quiz test");
   //  -- clear container
-  document.getElementById(mainContainer).innerHTML = "";
+  document.getElementById("mainContainer").innerHTML = "";
 
+  var currentQuestion = questions.choices[quizIndex];
+  console.log(currentQuestion);
   //  -- loop through array of questions / answers
   for (i = 0; i < questions.length; i++) {
     console.log(i);
-  }
-  //   -- show question
-  //  -- create 4 buttons and add answers to them
-  //  -- wait for click
-  //  -- check for correct answer
-  //  -- if right add 10 points to score
-  //   -- if wrong subtract 10 seconds from time
-  //  -- check to see if either questions have been completed or timer is 0
-  //  -- if not repeat
 
-  // display question[i]
-  //      -- showQuestion(question[i]);
-  // display list of answers[i][j]
-  //  --  for (j = 0; j < 4; j++) {
-  //  --  showAnswer(answers[i][j]);
+    //   -- show question
+
+    //  -- create 4 buttons and add answers to them
+    //  -- wait for click
+    //  -- check for correct answer
+    //  -- if right add 10 points to score
+    //   -- if wrong subtract 10 seconds from time
+    //  -- check to see if either questions have been completed or timer is 0
+    //  -- if not repeat
+  }
 }
 //
 
