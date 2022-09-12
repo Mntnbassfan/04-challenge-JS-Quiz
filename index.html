@@ -7,26 +7,33 @@
     <title>Quiz challenge</title>
   </head>
   <body>
-    <script src="./assets/script.js"></script>
+    <!-- link to high scores -->
+    <a href="HighScores.html">View High scores</a>
 
-    <div id="highScore" style="text-align: left">View High Score</div>
+    <!-- timer -->
     <div id="time" style="text-align: right">Time: 0</div>
 
-    <h1 align="center">Coding Quiz Challenge</h1>
-    <h4 align="center">
-      Try to answer the following code related questions within the time
-    </h4>
-    <h4 align="center">
-      limit. Keep in mind that incorrect answers will penalize your scoretime
-    </h4>
-    <h4 align="center">by ten seconds!</h4>
-    <center>
-      <button
-        id="start"
-        style="text-align: center; background-color: #0000ff; color: #ffffff"
-      >
-        Start Quiz
-      </button>
-    </center>
+    <!-- description of quiz -->
+    <section id="mainContainer">
+      <h1 align="center">Coding Quiz Challenge</h1>
+      <h4 align="center">
+        Try to answer the following code related questions within the time
+      </h4>
+      <h4 align="center">
+        limit. Keep in mind that incorrect answers will penalize your scoretime
+      </h4>
+      <h4 align="center">by ten seconds!</h4>
+      <center>
+        <!-- start button -->
+        <button
+          id="start"
+          style="text-align: center; background-color: #0000ff; color: #ffffff"
+        >
+          Start Quiz
+        </button>
+      </center>
+    </section>
+    <!-- link toscript.js -->
+    <script src="./assets/script.js"></script>
   </body>
 </html>
