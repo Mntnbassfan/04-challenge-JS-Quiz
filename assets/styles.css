@@ -8,9 +8,12 @@ p {
   font-size: 20px;
 }
 
-button {
-  justify-content: center;
+#mainContainer {
+  text-align: center;
 }
+
 #time {
-  top: 0px;
+  position: absolute;
+  right: 20px;
+  top: 10px;
 }

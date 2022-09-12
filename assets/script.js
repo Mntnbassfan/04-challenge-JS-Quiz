@@ -49,9 +49,14 @@ var questions = [
 
 //  -- Function for quiz
 function startQuiz() {
+  console.log("test");
   //  -- clear container
   document.getElementById(mainContainer).innerHTML = "";
+
   //  -- loop through array of questions / answers
+  for (i = 0; i < questions.length; i++) {
+    console.log(i);
+  }
   //   -- show question
   //  -- create 4 buttons and add answers to them
   //  -- wait for click
