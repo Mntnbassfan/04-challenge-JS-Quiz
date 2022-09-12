@@ -1,4 +1,6 @@
+//  -- call timer and start quiz functions
 document.getElementById("start").onclick = setTime;
+startQuiz;
 {
   console.log("clicked");
 }
@@ -47,21 +49,31 @@ var questions = [
 
 //  -- Function for quiz
 function startQuiz() {
-  // display question[i]
-  showQuestion(question[i]);
-  // display list of answers[i][j]
-  for (j = 0; j < 4; j++) {
-    showAnswer(answers[i][j]);
-  }
-  //
-}
-function showQuestion(s) {
-  alert("show question " + s);
-}
+  //  -- clear container
+  document.getElementById(mainContainer).innerHTML = "";
+  //  -- loop through array of questions / answers
+  //   -- show question
+  //  -- create 4 buttons and add answers to them
+  //  -- wait for click
+  //  -- check for correct answer
+  //  -- if right add 10 points to score
+  //   -- if wrong subtract 10 seconds from time
+  //  -- check to see if either questions have been completed or timer is 0
+  //  -- if not repeat
 
-function showAnswer(s) {
-  alert("show answer " + s);
+  // display question[i]
+  //      -- showQuestion(question[i]);
+  // display list of answers[i][j]
+  //  --  for (j = 0; j < 4; j++) {
+  //  --  showAnswer(answers[i][j]);
 }
+//
+
+//  -- function showQuestion(s) {
+//      -- alert("show question " + s);
+
+//   -- function showAnswer(s) {
+//  --  alert("show answer " + s);
 
 //  -- function for timer
 function setTime() {
@@ -75,7 +87,8 @@ function setTime() {
       clearInterval(timerInterval);
 
       //ENDS GAME
-      sendMessage();
+      document.getElementById("time").textContent = "finished";
+      console.log("Timer is 0");
     }
   }, 1000);
 }
