@@ -1,8 +1,7 @@
-//  -- call timer and start quiz functions
-document.getElementById("start").onclick = setTime;
-startQuiz;
+//  -- call start quiz functions
+document.getElementById("start").onclick = startQuiz;
 {
-  console.log("clicked");
+  console.log("click test");
 }
 
 // variable of seconds for timer
@@ -49,7 +48,9 @@ var questions = [
 
 //  -- Function for quiz
 function startQuiz() {
-  console.log("test");
+  console.log("function test");
+  setTime();
+  console.log("start quiz test");
   //  -- clear container
   document.getElementById(mainContainer).innerHTML = "";
 
@@ -82,6 +83,7 @@ function startQuiz() {
 
 //  -- function for timer
 function setTime() {
+  console.log("timer test");
   // Sets interval in variable
   var timerInterval = setInterval(function () {
     secondsLeft--;

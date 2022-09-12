@@ -1,6 +1,7 @@
 h1 {
   text-align: center;
   font-size: 30px;
+  color: red;
 }
 
 p {
@@ -16,4 +17,10 @@ p {
   position: absolute;
   right: 20px;
   top: 10px;
+}
+
+#start {
+  background-color: blue;
+  color: white;
+  padding: 8px;
 }
