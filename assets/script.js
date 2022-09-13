@@ -1,8 +1,5 @@
 //  -- call start quiz functions
 document.getElementById("start").onclick = startQuiz;
-{
-  console.log("click test");
-}
 
 // variable of seconds for timer
 var secondsLeft = 75;
@@ -52,21 +49,27 @@ var questions = [
 
 //  -- Function for quiz
 function startQuiz() {
-  console.log("function test");
+  console.log("startQuiz test");
   setTime();
-  console.log("start quiz test");
+
   //  -- clear container
   document.getElementById("mainContainer").innerHTML = "";
 
-  var currentQuestion = questions[(quizIndex, quizIndex)];
-  console.log(currentQuestion);
   //  -- loop through array of questions / answers
   for (i = 0; i < questions.length; i++) {
     console.log(i);
+    //      -- add value of question from array to displayedQuestion
+    var displayedQuestion = questions[quizIndex].currentQuestion;
+    console.log(displayedQuestion);
 
-    //   -- show question
-
+    //   -- show questions
+    // mainContainer.textContent(displayedQuestion);
     //  -- create 4 buttons and add answers to them
+    for (var j = 0; j < 5; j++) {
+      var displayedAnswer = document.createElement("button");
+      displayedAnswer.textContent = questions[j];
+      displayedAnswer.addEventListener("click", userChoice);
+    }
     //  -- wait for click
     //  -- check for correct answer
     //  -- if right add 10 points to score
