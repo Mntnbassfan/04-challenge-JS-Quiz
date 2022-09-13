@@ -62,46 +62,46 @@ function startQuiz() {
     var displayedQuestion = questions[quizIndex].currentQuestion;
     console.log(displayedQuestion);
 
-    //   -- show questions
-    // mainContainer.textContent(displayedQuestion);
-    //  -- create 4 buttons and add answers to them
+    //   -- show question
+    document.getElementById("mainContainer").innerHTML = displayedQuestion;
+
+    //  -- create 4 buttons and add answer text to them
     for (var j = 0; j < 5; j++) {
       var displayedAnswer = document.createElement("button");
       displayedAnswer.textContent = questions[j];
       displayedAnswer.addEventListener("click", userChoice);
-    }
+    
+
     //  -- wait for click
     //  -- check for correct answer
-    //  -- if right add 10 points to score
-    //   -- if wrong subtract 10 seconds from time
-    //  -- check to see if either questions have been completed or timer is 0
-    //  -- if not repeat
-  }
+    function userChoice () {
+if (e.target.button !== questions[quizIndex].answer) {
+ //   -- if subtract 10 seconds from time
+//  display "incorrect" in window
+} else {
+    //  -- add 10 points to score
+    // display "correct" in window
+} 
 }
-//
-
-//  -- function showQuestion(s) {
-//      -- alert("show question " + s);
-
-//   -- function showAnswer(s) {
-//  --  alert("show answer " + s);
+//  -- check to see if either questions have been completed or timer is 0
+//  -- if not repeat
+}}
 
 //  -- function for timer
-function setTime() {
-  console.log("timer test");
-  // Sets interval in variable
-  var timerInterval = setInterval(function () {
-    secondsLeft--;
-    time.textContent = secondsLeft + " seconds left.";
+// function setTime() {
+//   console.log("timer test");
+//   // Sets interval in variable
+//   var timerInterval = setInterval(function () {
+//     secondsLeft--;
+//     time.textContent = secondsLeft + " seconds left.";
 
-    if (secondsLeft <= 0) {
-      // Stops execution of action at set interval
-      clearInterval(timerInterval);
+//     if (secondsLeft <= 0) {
+//       // Stops execution of action at set interval
+//       clearInterval(timerInterval);
 
-      //ENDS GAME
-      document.getElementById("time").textContent = "finished";
-      console.log("Timer is 0");
-    }
-  }, 1000);
-}
-//  -- function for display score
+//       //ends quiz
+//       document.getElementById("time").textContent = "finished";
+//       console.log("Timer is 0");
+//      }
+//   }, 1000);
+// }
