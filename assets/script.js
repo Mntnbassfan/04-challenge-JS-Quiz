@@ -78,8 +78,17 @@ function checkAnswer(event) {
     quizIndex++;
     secondsLeft = secondsLeft - 10;
   }
+
   document.getElementById("displayScore").textContent =
     "Current Score: " + score;
+
+  // check if all quetions have been answered, if so end the quiz
+  if (quizIndex === questions.length || secondsLeft === 0) {
+    displayUserInfo();
+    return;
+  } else {
+    displayQuestion();
+  }
 }
 //  -- function for timer
 function setTime() {
@@ -94,8 +103,14 @@ function setTime() {
       clearInterval(timerInterval);
 
       //ends quiz
-      document.getElementById("time").textContent = "finished";
+      document.getElementById("time").textContent = "Time is 0";
       console.log("Timer is 0");
     }
   }, 1000);
+}
+// ask for user initals and display final score
+function displayUserInfo() {
+  var userInitials = prompt("Please enter your initials");
+  document.getElementById("mainContainer").innerHTML =
+    userInitials + " Final Score =  " + score;
 }
